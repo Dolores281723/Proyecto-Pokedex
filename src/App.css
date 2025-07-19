@@ -1,0 +1,184 @@
+/* src/App.css */
+
+/* Estilos generales para centrar y dar un fondo */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: #f0f0f0;
+}
+
+.pokedex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #333;
+}
+
+/* LA PARTE MÁS IMPORTANTE: La cuadrícula de Pokémon */
+.pokemon-grid {
+  display: grid;
+  /* Crea columnas flexibles que se ajustan al tamaño de la pantalla */
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px; /* Espacio entre las tarjetas */
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 20px;
+}
+
+/* Estilos para cada tarjeta individual */
+.pokemon-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.2s ease-in-out; /* Animación suave */
+}
+
+/* Efecto al pasar el ratón por encima */
+.pokemon-card:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.pokemon-card img {
+  width: 100px;
+  height: 100px;
+}
+
+.pokemon-card p {
+  margin-top: 10px;
+  font-weight: bold;
+  text-transform: capitalize; /* Pone la primera letra en mayúscula */
+  color: #444;
+}
+/* === ESTILOS PARA LA PÁGINA DE DETALLE === */
+
+/* Para que el Link no tenga el subrayado azul feo */
+.pokemon-link {
+  text-decoration: none;
+}
+
+.back-link {
+  align-self: flex-start;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #007bff;
+  text-decoration: none;
+}
+.back-link:hover {
+  text-decoration: underline;
+}
+
+.pokemon-detail-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  min-height: 100vh;
+}
+
+.pokemon-detail-card {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+}
+
+.pokemon-detail-image {
+  width: 200px;
+  height: 200px;
+  margin-top: -70px; /* Saca la imagen un poco hacia arriba */
+  filter: drop-shadow(0 5px 15px rgba(0,0,0,0.2));
+}
+
+.pokemon-detail-name {
+  font-size: 2.5rem;
+  text-transform: capitalize;
+  margin: 10px 0;
+}
+
+.pokemon-types {
+  margin-bottom: 20px;
+}
+
+.type-badge {
+  color: white;
+  padding: 5px 15px;
+  margin: 0 5px;
+  border-radius: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.pokemon-info {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 20px;
+}
+
+.pokemon-stats {
+  text-align: left;
+  width: 100%;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.stat-name {
+  width: 120px;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+.stat-bar {
+  flex-grow: 1;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  height: 20px;
+}
+
+.stat-bar-fill {
+  background-color: #4caf50;
+  height: 100%;
+  border-radius: 5px;
+  color: white;
+  font-size: 0.8rem;
+  padding-left: 5px;
+  line-height: 20px;
+}
+
+/* Colores para los tipos de Pokémon */
+.type-grass { background-color: #78C850; }
+.type-fire { background-color: #F08030; }
+.type-water { background-color: #6890F0; }
+.type-bug { background-color: #A8B820; }
+.type-normal { background-color: #A8A878; }
+.type-poison { background-color: #A040A0; }
+.type-electric { background-color: #F8D030; }
+.type-ground { background-color: #E0C068; }
+.type-fairy { background-color: #EE99AC; }
+.type-fighting { background-color: #C03028; }
+.type-psychic { background-color: #F85888; }
+.type-rock { background-color: #B8A038; }
+.type-ghost { background-color: #705898; }
+.type-ice { background-color: #98D8D8; }
+.type-dragon { background-color: #7038F8; }
+.type-steel { background-color: #B8B8D0; }
+.type-flying { background-color: #A890F0; }
