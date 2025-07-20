@@ -24,11 +24,20 @@ const PokemonList = () => {
     getPokemons();
   }, []);
 
+   const playPokemonCry = (pokemonName) => {
+    const cleanName = pokemonName.toLowerCase().trim();
+    const soundUrl = `https://play.pokemonshowdown.com/audio/cries/${cleanName}.mp3`;
+    const audio = new Audio(soundUrl);
+    audio.play().catch(error => console.error("Error al reproducir el sonido:", error));
+  };
+
   if (loading) {
     return <p>Cargando Pokémon...</p>;
   }
 
   return (
+
+  
     <div className="pokedex-container">
       <h1>Mi Pokédex</h1>
       <div className="pokemon-grid">
@@ -42,7 +51,9 @@ const PokemonList = () => {
           return (
             // NUEVO: Envolvemos la tarjeta en un componente Link
             <Link to={`/pokemon/${pokemon.name}`} className="pokemon-link" key={id}>
-              <div className="pokemon-card">
+              <div className="pokemon-card"
+                onClick={() => playPokemonCry(pokemon.name)}
+                >
                 <img src={imageUrl} alt={pokemon.name} />
                 <p>{pokemon.name}</p>
               </div>
