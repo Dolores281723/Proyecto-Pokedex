@@ -8,7 +8,7 @@ import './index.css';
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     {/* Envuelve tu App en el BrowserRouter */}
-    <BrowserRouter>
+    <BrowserRouter basename="/Proyecto-Pokedex/">
       <App />
     </BrowserRouter>
   </React.StrictMode>,

@@ -28,6 +28,8 @@ h1 {
   width: 100%;
   max-width: 1200px;
   margin-top: 20px;
+  gap: 1rem;
+  padding: 1rem;
 }
 
 /* Estilos para cada tarjeta individual */
@@ -50,8 +52,9 @@ h1 {
 }
 
 .pokemon-card img {
-  width: 100px;
-  height: 100px;
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .pokemon-card p {
