@@ -10,7 +10,8 @@ body {
 
 .pokedex-container {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap; /*Permite que las tarjetas pasen a la siguiente línea*/
+  justify-content: center; /*Centra las tarjetas horizontalmente en el espacio disponible*/
   align-items: center;
   padding: 20px;
 }
